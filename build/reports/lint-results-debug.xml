@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 3.0.1">
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.tools.build:gradle than 3.0.1 is available: 3.2.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="        classpath &apos;com.android.tools.build:gradle:3.0.1&apos;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/build.gradle"
+            line="32"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;`brvah_app_name`&quot; is not translated in &quot;en&quot; (English)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Incomplete translation"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.&#xA;&#xA;If the string should **not** be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.&#xA;&#xA;By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.&#xA;&#xA;You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;brvah_app_name&quot;>Library&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/values/strings.xml"
+            line="2"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 19"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/java/com/chad/library/adapter/base/BaseViewHolder.java"
+            line="214"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.brvah_sample_footer_loading` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        quickfix="studio">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/drawable/brvah_sample_footer_loading.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.brvah_sample_footer_loading_progress` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^"
+        quickfix="studio">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/drawable/brvah_sample_footer_loading_progress.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.def_height` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;def_height&quot;>50dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/values/dimens.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.dp_10` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;dp_10&quot;>10dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/values/dimens.xml"
+            line="6"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.dp_72` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;dp_72&quot;>72dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/values/dimens.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.sp_12` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;sp_12&quot;>12sp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/values/dimens.xml"
+            line="10"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.sp_16` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;sp_16&quot;>16sp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/values/dimens.xml"
+            line="12"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.brvah_app_name` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;brvah_app_name&quot;>Library&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/values/strings.xml"
+            line="2"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        severity="Warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Ellipsis string can be replaced with ellipsis character"
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
+        errorLine1="    &lt;string name=&quot;brvah_loading&quot;>Loading...&lt;/string>"
+        errorLine2="                                 ^"
+        quickfix="studio">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/values-en/strings.xml"
+            line="2"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        severity="Warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Ellipsis string can be replaced with ellipsis character"
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
+        errorLine1="    &lt;string name=&quot;brvah_loading&quot;>正在加载中...&lt;/string>"
+        errorLine2="                                 ^"
+        quickfix="studio">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/values/strings.xml"
+            line="3"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        severity="Warning"
+        message="Found bitmap drawable `res/drawable/brvah_sample_footer_loading.png` in densityless folder"
+        category="Usability:Icons"
+        priority="5"
+        summary="Image defined in density-independent drawable folder"
+        explanation="The res/drawable folder is intended for density-independent graphics such as shapes defined in XML. For bitmaps, move it to `drawable-mdpi` and consider providing higher and lower resolution versions in `drawable-ldpi`, `drawable-hdpi` and `drawable-xhdpi`. If the icon **really** is density independent (for example a solid color) you can place it in `drawable-nodpi`."
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/drawable/brvah_sample_footer_loading.png"/>
+    </issue>
+
+    <issue
+        id="ClickableViewAccessibility"
+        severity="Warning"
+        message="`onTouch` should call `View#performClick` when a click is detected"
+        category="Accessibility"
+        priority="6"
+        summary="Accessibility in Custom Views"
+        explanation="If a `View` that overrides `onTouchEvent` or uses an `OnTouchListener` does not also implement `performClick` and call it when clicks are detected, the `View` may not handle accessibility actions properly. Logic handling the click actions should ideally be placed in `View#performClick` as some accessibility services invoke `performClick` when a click action should occur."
+        errorLine1="                public boolean onTouch(View v, MotionEvent event) {"
+        errorLine2="                               ~~~~~~~">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/java/com/chad/library/adapter/base/BaseItemDraggableAdapter.java"
+            line="112"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/dp_4&quot;` to better support right-to-left layouts"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="            android:layout_marginRight=&quot;@dimen/dp_4&quot;/>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/layout/brvah_quick_view_load_more.xml"
+            line="19"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/dp_4&quot;` to better support right-to-left layouts"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="            android:layout_marginLeft=&quot;@dimen/dp_4&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/res/layout/brvah_quick_view_load_more.xml"
+            line="25"
+            column="13"/>
+    </issue>
+
+</issues>

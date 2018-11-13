@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/main/assets"/><source path="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Volumes/Data/EnjoyProject/component/ui/ui-component-list/src/debug/assets"/></dataSet></merger>
