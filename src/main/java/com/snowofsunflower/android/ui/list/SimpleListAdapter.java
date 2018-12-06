@@ -30,6 +30,21 @@ public abstract class SimpleListAdapter<T> implements IRecyclerViewListAdapter<T
     public void setNewData(List<T> list) {
         mCymChadAdapter.setNewData(list);
     }
+
+    @Override
+    public T getItem(int position) {
+        return (T) mCymChadAdapter.getItem(position);
+    }
+
+    @Override
+    public void setOnItemClickListener(final OnItemClickListener listener) {
+        mCymChadAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                listener.onItemClick(SimpleListAdapter.this,position,adapter.getItem(position));
+            }
+        });
+    }
 }
 
 class InnerListAdapter<T> extends BaseQuickAdapter<T, BaseViewHolder> {

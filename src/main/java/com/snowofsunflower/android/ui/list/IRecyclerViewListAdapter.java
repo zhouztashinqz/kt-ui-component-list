@@ -15,4 +15,6 @@ public interface IRecyclerViewListAdapter<T> {
     int getItemLayoutId();
     void doItem(ItemViewHolder itemViewHolder, T item);
     void setNewData(List<T> list);
+    T getItem(int position);
+    void setOnItemClickListener(OnItemClickListener listener);
 }
