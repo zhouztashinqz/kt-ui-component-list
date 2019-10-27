@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
-apply from: "conlib.gradle"
-apply from: "conproject.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion buildconfig.compileSdkVersion
 
@@ -20,24 +20,12 @@ android {
         abortOnError false
     }
 }
-buildscript {
-
-    repositories {
-        mavenCentral()
-        google()
-        jcenter()
-        maven { url "https://jitpack.io" }
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
-    }
-}
-
 
 dependencies {
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    compile googlelib.recyclerview_v7
+    implementation googlelib.recyclerview_v7
+    implementation sourcelib.cymchad_recyclerview
 }
 
 repositories {
